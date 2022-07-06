@@ -49,8 +49,7 @@ public class OrderHystrixController {
     }
 
     // 下面是全局fallback方法
-    public String payment_Global_FallbackMethod()
-    {
+    public String payment_Global_FallbackMethod(){
         return "Global异常处理信息，请稍后再试，/(ㄒoㄒ)/~~";
     }
 

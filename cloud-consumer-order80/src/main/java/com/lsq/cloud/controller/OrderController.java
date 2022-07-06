@@ -34,7 +34,7 @@ public class OrderController {
 
     @GetMapping("/consumer/payment/create")
     public CommonResult<Payment> create(Payment payment){
-
+        //(url, requestMap, ResponseBean.class)这三个参数分别代表。
         return restTemplate.postForObject(PAYMENT_URL+"/payment/create", payment, CommonResult.class);
     }
 
@@ -73,8 +73,7 @@ public class OrderController {
 
     // ====================> zipkin+sleuth
     @GetMapping("/consumer/payment/zipkin")
-    public String paymentZipkin()
-    {
+    public String paymentZipkin() {
         String result = restTemplate.getForObject("http://localhost:8001"+"/payment/zipkin/", String.class);
         return result;
     }

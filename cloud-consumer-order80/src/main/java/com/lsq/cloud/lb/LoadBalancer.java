@@ -9,7 +9,7 @@ import java.util.List;
  * @Date 2022/6/19 21:52
  * @description:
  */
-public interface LoadBalancer
-{
+public interface LoadBalancer{
+
     ServiceInstance instances(List<ServiceInstance> serviceInstances);
 }

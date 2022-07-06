@@ -29,8 +29,8 @@ eureka:
       #defaultZone: http://localhost:7001/eureka
       defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka
   instance:
-    instance-id: payment8001
-    prefer-ip-address: true
+    instance-id: payment8001 #payment8001代替原来显示的IP地址。
+    prefer-ip-address: true #IP地址提示
     #心跳检测与续约时间
     #开发时没置小些，保证服务关闭后注册中心能即使剔除服务
     #Eureka客户端向服务端发送心跳的时间间隔，单位为秒(默认是30秒)
